@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "07c8abc0-a3e7-44ac-a018-33b3701d95af",
+    "name": "DEMO CREDIT API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32477169"
+  },
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://demo-credit-i8zh.onrender.com/health",
+          "protocol": "https",
+          "host": [
+            "demo-credit-i8zh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"testuser@mailinator.com\",\n  \"password\": \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo-credit-i8zh.onrender.com/api/auth/register",
+          "protocol": "https",
+          "host": [
+            "demo-credit-i8zh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Fund wallet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0ZXN0dXNlckBtYWlsaW5hdG9yLmNvbSIsImlhdCI6MTc4MDQ1NjA2NywiZXhwIjoxNzgwNTQyNDY3fQ.xHyOasmP81J40X2kowDOzBtHQ-DtFMh1fYcMQU-7tF0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\": 5000}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo-credit-i8zh.onrender.com/api/wallet/fund",
+          "protocol": "https",
+          "host": [
+            "demo-credit-i8zh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "wallet",
+            "fund"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Transfer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0ZXN0dXNlckBtYWlsaW5hdG9yLmNvbSIsImlhdCI6MTc4MDQ1NjA2NywiZXhwIjoxNzgwNTQyNDY3fQ.xHyOasmP81J40X2kowDOzBtHQ-DtFMh1fYcMQU-7tF0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"receiverEmail\": \"receiver@mailinator.com\",\n  \"amount\": 1000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo-credit-i8zh.onrender.com/api/wallet/transfer",
+          "protocol": "https",
+          "host": [
+            "demo-credit-i8zh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "wallet",
+            "transfer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Withdraw",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Balance",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0ZXN0dXNlckBtYWlsaW5hdG9yLmNvbSIsImlhdCI6MTc4MDQ1NjA2NywiZXhwIjoxNzgwNTQyNDY3fQ.xHyOasmP81J40X2kowDOzBtHQ-DtFMh1fYcMQU-7tF0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://demo-credit-i8zh.onrender.com/api/wallet/balance",
+          "protocol": "https",
+          "host": [
+            "demo-credit-i8zh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "wallet",
+            "balance"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
